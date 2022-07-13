@@ -17,6 +17,18 @@ namespace MultiValueDictionary
                 {
                     Add(dict, inputs);
                 }
+                else if (inputs[0].Equals("MEMBERS"))
+                {
+                    Members(dict, inputs);
+                }
+                else if (inputs[0].Equals("KEYEXISTS"))
+                {
+                    KeyExists(dict, inputs);
+                }
+                else if (inputs[0].Equals("MEMBEREXISTS"))
+                {
+                    MemberExists(dict, inputs);
+                }
                 else if (inputs[0].Equals("ITEMS"))
                 {
                     Items(dict);
@@ -37,6 +49,9 @@ namespace MultiValueDictionary
                 {
                     Console.Write("Bad command\n");
                 }
+                //remove
+                //removeall
+                //memberexists
             }
         }
         private static void Add(List<KeyValuePair<string, string>> dict, string[] inputs)
@@ -98,6 +113,54 @@ namespace MultiValueDictionary
         {
             dict.Clear();
             Console.Write(") Cleared\n");
+        }
+        private static void Members(List<KeyValuePair<string, string>> dict, string[] inputs)
+        {
+            List<string> uniqueMembers = new List<string>();
+            int i = 1;
+            foreach (KeyValuePair<string, string> kvp in dict)
+            {
+                if (kvp.Key.Equals(inputs[1]))
+                {
+                    uniqueMembers.Add(kvp.Value);
+                }
+            }
+            if (uniqueMembers.Count.Equals(0))
+            {
+                Console.Write(") ERROR, key does not exist\n");
+            }
+            else
+            {
+                foreach (string member in uniqueMembers)
+                {
+                    Console.Write($"{i}) {member}\n");
+                    i++;
+                }
+            }
+        }
+        private static void KeyExists(List<KeyValuePair<string, string>> dict, string[] inputs)
+        {
+            bool isExistingKey = false;
+            foreach (KeyValuePair<string, string> kvp in dict)
+            {
+                if (kvp.Key.Equals(inputs[1]))
+                {
+                    isExistingKey = true;
+                }
+            }
+            Console.Write($") {isExistingKey.ToString().ToLower()}\n");
+        }
+        private static void MemberExists(List<KeyValuePair<string, string>> dict, string[] inputs)
+        {
+            bool isExistingKey = false;
+            foreach (KeyValuePair<string, string> kvp in dict)
+            {
+                if (kvp.Key.Equals(inputs[1]) && kvp.Value.Equals(inputs[2]))
+                {
+                    isExistingKey = true;
+                }
+            }
+            Console.Write($") {isExistingKey.ToString().ToLower()}\n");
         }
     }
 }
