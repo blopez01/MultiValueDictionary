@@ -29,6 +29,10 @@ namespace MultiValueDictionary
                 {
                     Keys(dict);
                 }
+                else if (inputs[0].Equals("CLEAR"))
+                {
+                    Clear(dict);
+                }
                 else
                 {
                     Console.Write("Bad command\n");
@@ -68,7 +72,6 @@ namespace MultiValueDictionary
         }
         private static void Keys(List<KeyValuePair<string, string>> dict)
         {
-            //are keys unique? or can they be copied
             int i = 1;
             List<string> uniqueKeys = new List<string>();
             foreach (KeyValuePair<string, string> kvp in dict)
@@ -90,6 +93,11 @@ namespace MultiValueDictionary
                     i++;
                 }
             }
+        }
+        private static void Clear(List<KeyValuePair<string, string>> dict)
+        {
+            dict.Clear();
+            Console.Write(") Cleared\n");
         }
     }
 }
