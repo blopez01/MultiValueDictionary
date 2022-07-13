@@ -21,6 +21,14 @@ namespace MultiValueDictionary
                 {
                     Items(dict);
                 }
+                else if (inputs[0].Equals("ALLMEMBERS"))
+                {
+                    AllMembers(dict);
+                }
+                else if (inputs[0].Equals("KEYS"))
+                {
+                    Keys(dict);
+                }
                 else
                 {
                     Console.Write("Bad command\n");
@@ -32,7 +40,6 @@ namespace MultiValueDictionary
             string key = inputs[1];
             string value = inputs[2];
             KeyValuePair<string, string> kvp = new KeyValuePair<string, string>(key, value);
-            string valueFound;
             if (dict.Contains(kvp))
             {
                 Console.Write(") ERROR, member already exists for key\n");
@@ -48,6 +55,40 @@ namespace MultiValueDictionary
             {
                 Console.Write($"{i}) {kvp.Key}: {kvp.Value}\n");
                 i++;
+            }
+        }
+        private static void AllMembers(List<KeyValuePair<string, string>> dict)
+        {
+            int i = 1;
+            foreach (KeyValuePair<string, string> kvp in dict)
+            {
+                Console.Write($"{i}) {kvp.Value}\n");
+                i++;
+            }
+        }
+        private static void Keys(List<KeyValuePair<string, string>> dict)
+        {
+            //are keys unique? or can they be copied
+            int i = 1;
+            List<string> uniqueKeys = new List<string>();
+            foreach (KeyValuePair<string, string> kvp in dict)
+            {
+                if (!uniqueKeys.Contains(kvp.Key))
+                {
+                    uniqueKeys.Add(kvp.Key);
+                }
+            }
+            if (uniqueKeys.Count.Equals(0))
+            {
+                Console.Write(") empty set\n");
+            }
+            else
+            {
+                foreach (string key in uniqueKeys)
+                {
+                    Console.Write($"{i}) {key}\n");
+                    i++;
+                }
             }
         }
     }
