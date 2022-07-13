@@ -1,0 +1,13 @@
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.exe
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.deps.json
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.runtimeconfig.json
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.runtimeconfig.dev.json
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.dll
+E:\worksample\MultiValueDictionary\MultiValueDictionary\bin\Debug\netcoreapp3.1\MultiValueDictionary.pdb
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.csprojAssemblyReference.cache
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.AssemblyInfoInputs.cache
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.AssemblyInfo.cs
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.csproj.CoreCompileInputs.cache
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.dll
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.pdb
+E:\worksample\MultiValueDictionary\MultiValueDictionary\obj\Debug\netcoreapp3.1\MultiValueDictionary.genruntimeconfig.cache
