@@ -7,7 +7,7 @@ namespace MultiValueDictionary
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+            List<KeyValuePair<string, string>> dict = new List<KeyValuePair<string, string>>();
             while (true)
             {
                 Console.Write("> ");
@@ -27,23 +27,21 @@ namespace MultiValueDictionary
                 }
             }
         }
-        private static void Add(Dictionary<string, string> dict, string[] inputs)
+        private static void Add(List<KeyValuePair<string, string>> dict, string[] inputs)
         {
             string key = inputs[1];
             string value = inputs[2];
+            KeyValuePair<string, string> kvp = new KeyValuePair<string, string>(key, value);
             string valueFound;
-            if (dict.TryGetValue(key, out valueFound))
+            if (dict.Contains(kvp))
             {
-                if (valueFound.Equals(value))
-                {
-                    Console.Write(") ERROR, member already exists for key\n");
-                    return;
-                }
+                Console.Write(") ERROR, member already exists for key\n");
+                return;
             }
-            dict.Add(key, value);
+            dict.Add(kvp);
             Console.Write(") Added\n");
         }
-        private static void Items(Dictionary<string, string> dict)
+        private static void Items(List<KeyValuePair<string, string>> dict)
         {
             int i = 1;
             foreach (KeyValuePair<string, string> kvp in dict)
