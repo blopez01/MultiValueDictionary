@@ -5,11 +5,3 @@ The Multi-Value Dictionary app is a command line application that stores a multi
 ## Commands
 ###### KEYS
 Returns all the keys in the dictionary. Order is not guaranteed.
-Example
-> > ADD foo bar
-> ) Added
-> ADD baz bang
-> ) Added
-> > KEYS
-> 1) foo
-> 2) baz
