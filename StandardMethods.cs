@@ -70,7 +70,7 @@ namespace MultiValueDictionary
             }
         }
         /// <summary>
-        /// Method <c>Add</c> displays adds a key value pair to the MultiValueDictionary.
+        /// Method <c>Add</c> adds a key value pair to the MultiValueDictionary.
         /// </summary>
         /// <param name="dict">the MultiValueDictionary being manipulated.</param>
         /// <param name="inputs">the string array of user inputs.</param>
@@ -164,7 +164,7 @@ namespace MultiValueDictionary
         /// <param name="dict">the MultiValueDictionary being manipulated.</param>
         /// <param name="inputs">the string array of user inputs.</param>
         /// <param name="print">specifies printing functionality.</param>
-        /// <returns>Returns whether a key exists or not.</returns>
+        /// <returns>Returns true if a key exists or not. Returns false if the key does not exist.</returns>
         private static bool KeyExists(List<KeyValuePair<string, string>> dict, string[] inputs, bool print)
         {
             if (!inputs.Length.Equals(2))
@@ -195,7 +195,7 @@ namespace MultiValueDictionary
         /// <param name="dict">the MultiValueDictionary being manipulated.</param>
         /// <param name="inputs">the string array of user inputs.</param>
         /// <param name="print">specifies printing functionality.</param>
-        /// <returns>Returns whether a member exists within a key. Returns false if the key does not exist.</returns>
+        /// <returns>Returns true if a member exists within a key. Returns false if the key does not exist or if the member does not exist.</returns>
         private static bool MemberExists(List<KeyValuePair<string, string>> dict, string[] inputs, bool print)
         {
             if (!inputs.Length.Equals(3))

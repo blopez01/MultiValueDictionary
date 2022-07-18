@@ -8,6 +8,7 @@ namespace MultiValueDictionary
         static void Main(string[] args)
         {
             List<KeyValuePair<string, string>> dict = new List<KeyValuePair<string, string>>();
+            Console.Write("Welcome to MultiValueDictionary! Type HELP to view functionality.\n");
             while (true)
             {
                 Console.Write("> ");
@@ -53,6 +54,14 @@ namespace MultiValueDictionary
                 else if (command.Equals("ITEMS"))
                 {
                     Items(dict);
+                }
+                else if (command.Equals("EDIT"))
+                {
+                    Edit(dict, inputs);
+                }
+                else if (command.Equals("HELP"))
+                {
+                    ListFunctions();
                 }
                 else
                 {
